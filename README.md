@@ -1,41 +1,59 @@
-﻿# python-rag-langchain
+# Python RAG LangChain
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-RAG-1C3C3C)
 ![FAISS](https://img.shields.io/badge/FAISS-Vector%20Search-0467DF)
 ![Local LLM](https://img.shields.io/badge/LLM-Local%20Inference-2E8B57)
 
-A production-style showcase project that implements a complete local Retrieval-Augmented Generation (RAG) pipeline using LangChain.
+> PL: Repo jest prowadzone po angielsku (dla szerszej widocznosci), ale przyklady i use-case sa osadzone w realnym kontekscie lokalnym.
 
-## Overview
-This repository demonstrates how to orchestrate a practical GenAI system that:
-- ingests local data from `knowledge.txt`
-- transforms raw text into chunks and embeddings
-- loads vectors into FAISS for semantic retrieval
-- generates grounded answers with a local Hugging Face model (`google/flan-t5-small`)
+Production-style showcase project that implements a complete local Retrieval-Augmented Generation (RAG) pipeline with LangChain.
 
-The project is fully local and does not require paid API keys.
+## TL;DR (60s)
+Run locally (no paid API keys required):
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+python rag_demo.py
+```
+
+Run custom query:
+```bash
+python rag_demo.py -q "What are Daniel's main career goals?"
+```
+
+## What It Demonstrates
+- end-to-end local RAG setup (ingestion -> chunking -> embeddings -> retrieval -> answer)
+- practical semantic search with FAISS
+- grounded QA over a custom local knowledge base (`knowledge.txt`)
+- lightweight observability for debugging and evaluation
+
+## Architecture
+- embeddings model: `sentence-transformers/all-MiniLM-L6-v2`
+- vector store: FAISS (`faiss_index/`)
+- generation model: `google/flan-t5-small` via Hugging Face pipeline
+- orchestration: LangChain `RetrievalQA`
 
 ## Technical Highlights
-- `LangChain` for end-to-end AI workflow orchestration
-- `FAISS` as the vector database for fast similarity search
-- `HuggingFaceEmbeddings` with `sentence-transformers/all-MiniLM-L6-v2`
-- `RetrievalQA` chain for retrieval + generation
-- local LLM inference through `HuggingFacePipeline`
+- `LangChain` for workflow orchestration
+- `FAISS` for fast similarity search
+- `HuggingFaceEmbeddings` for vector representation
+- `RetrievalQA` for retrieval + generation
+- local LLM inference (`HuggingFacePipeline`)
 
-## LLM Observability
-The demo includes lightweight observability for QA runs:
+## Observability
+The demo includes basic QA run observability:
 - chain-level verbose execution (`verbose=True`)
-- structured JSONL run logs in `observability_logs.jsonl`
+- structured JSONL logs in `observability_logs.jsonl`
 - captured fields: timestamp, question, answer, source documents
 
-## AI Data Pipeline (ETL) Perspective
-This repository explicitly reflects an ETL-style AI workflow:
+## AI Data Pipeline (ETL View)
 - **Extract**: load unstructured knowledge from `knowledge.txt`
-- **Transform**: split text and create vector embeddings
-- **Load**: persist vectors in a FAISS index (`faiss_index/`)
+- **Transform**: split text and build vector embeddings
+- **Load**: persist vectors into a FAISS index (`faiss_index/`)
 
-Then the online inference path performs retrieval and generation over the indexed data.
+Then the online path executes retrieval and generation over the indexed data.
 
 ## Project Structure
 - `rag_demo.py`: complete RAG implementation
@@ -43,26 +61,13 @@ Then the online inference path performs retrieval and generation over the indexe
 - `requirements.txt`: Python dependencies
 - `docs/qa-evaluation.md`: quality and evaluation notes
 
-## Quick Start
-```bash
-python -m venv .venv
-.venv\\Scripts\\activate
-pip install -r requirements.txt
-python rag_demo.py
-```
-
-## Example Custom Query
-```bash
-python rag_demo.py -q "What are Daniel's main career goals?"
-```
-
-## Project Demo
-Run a short multi-question session:
+## Demo Session
+Run multiple questions in one command:
 ```bash
 python rag_demo.py -q "Where does Daniel study?" -q "What technologies are used in this RAG pipeline?"
 ```
 
-Expected result pattern:
+Expected answer pattern:
 ```text
 Question: Where does Daniel study?
 Answer: Daniel studies Computer Science at the University of Wroclaw (UWr).
@@ -70,7 +75,12 @@ Sources: knowledge.txt
 ```
 
 After execution, inspect:
-- `observability_logs.jsonl` for structured LLM observability events
-- `faiss_index/` for persisted vector index artifacts
+- `observability_logs.jsonl` for structured run events
+- `faiss_index/` for persisted vector artifacts
 
-This project showcases practical skills in GenAI orchestration, RAG architecture design, and AI data pipeline engineering.
+## Portfolio Positioning
+This repository showcases practical skills in:
+- GenAI orchestration
+- RAG architecture design
+- retrieval quality mindset
+- AI data pipeline engineering
