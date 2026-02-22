@@ -1,0 +1,5 @@
+﻿Daniel Loza is a Computer Science student at the University of Wroclaw (UWr).
+He programs in Python and C++ and builds algorithm-focused software projects.
+He is experienced in data structures, algorithms, and technical problem solving.
+He is actively developing Generative AI and RAG systems with LangChain and FAISS.
+His career goals include contributing to high-impact product companies such as Bending Spoons and Evernote.
