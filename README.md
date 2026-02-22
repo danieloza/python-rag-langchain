@@ -1,5 +1,10 @@
 ﻿# python-rag-langchain
 
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-RAG-1C3C3C)
+![FAISS](https://img.shields.io/badge/FAISS-Vector%20Search-0467DF)
+![Local LLM](https://img.shields.io/badge/LLM-Local%20Inference-2E8B57)
+
 A production-style showcase project that implements a complete local Retrieval-Augmented Generation (RAG) pipeline using LangChain.
 
 ## Overview
@@ -50,5 +55,22 @@ python rag_demo.py
 ```bash
 python rag_demo.py -q "What are Daniel's main career goals?"
 ```
+
+## Project Demo
+Run a short multi-question session:
+```bash
+python rag_demo.py -q "Where does Daniel study?" -q "What technologies are used in this RAG pipeline?"
+```
+
+Expected result pattern:
+```text
+Question: Where does Daniel study?
+Answer: Daniel studies Computer Science at the University of Wroclaw (UWr).
+Sources: knowledge.txt
+```
+
+After execution, inspect:
+- `observability_logs.jsonl` for structured LLM observability events
+- `faiss_index/` for persisted vector index artifacts
 
 This project showcases practical skills in GenAI orchestration, RAG architecture design, and AI data pipeline engineering.
