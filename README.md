@@ -23,6 +23,11 @@ Run custom query:
 python rag_demo.py -q "What are Daniel's main career goals?"
 ```
 
+Reuse an existing local FAISS index (trusted files only):
+```bash
+python rag_demo.py --trust-local-index -q "Where does Daniel study?"
+```
+
 ## What It Demonstrates
 - end-to-end local RAG setup (ingestion -> chunking -> embeddings -> retrieval -> answer)
 - practical semantic search with FAISS
@@ -47,6 +52,13 @@ The demo includes basic QA run observability:
 - chain-level verbose execution (`verbose=True`)
 - structured JSONL logs in `observability_logs.jsonl`
 - captured fields: timestamp, question, answer, source documents
+
+## Index Safety And Freshness
+- the index fingerprint is based on `knowledge.txt` hash + chunking config + embedding model
+- metadata is stored in `faiss_index/index_metadata.json`
+- when knowledge/config changes, the script automatically rebuilds the FAISS index
+- default mode is safe: it rebuilds instead of loading pickled index state
+- use `--trust-local-index` only for trusted local files to reuse persisted index faster
 
 ## AI Data Pipeline (ETL View)
 - **Extract**: load unstructured knowledge from `knowledge.txt`
