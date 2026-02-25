@@ -1,5 +1,36 @@
-﻿Daniel Loza is a Computer Science student at the University of Wroclaw (UWr).
-He programs in Python and C++ and builds algorithm-focused software projects.
-He is experienced in data structures, algorithms, and technical problem solving.
-He is actively developing Generative AI and RAG systems with LangChain and FAISS.
-His career goals include contributing to high-impact product companies such as Bending Spoons and Evernote.
+Fresh.com to luksusowy salon beauty. Właścicielem jest Daniel. Systemem zarządza BeautyOS.
+
+RAPORT BIZNESOWY FRESH.COM (Generowany: 2026-02-24 21:46)
+---
+### Ogólna Kondycja Biznesu (Ostatnie 30 dni)
+Łączny przychód wyniósł 0.00 PLN przy 0 wizytach.
+Średnia wartość paragonu (Average Ticket) to 0.00 PLN.
+Wnioski ogólne: 
+Firma wymaga intensyfikacji marketingu.
+
+### Wyniki Zespołu (Ranking)
+
+### Profile Pracowników (Kontekst HR)
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+- Magda: Aktywny. Specjalizacja: Ogólna. Rating: 5.00/5.0.
+[INVOICE-ENTRY] Date: 2026-02-17 | Vendor: Danex | Amount: 123,45 PLN | Content Keywords: OCR...
+[INVOICE-ENTRY] Date: 2026-02-17 | Vendor: Danex | Amount: 123,45 PLN | Content Keywords: OCR...
+[INVOICE-ENTRY] Date: 2026-02-17 | Vendor: Danex | Amount: 123,45 PLN | Content Keywords: OCR...
+[INVOICE-ENTRY] Date: 2026-02-17 | Vendor: Danex | Amount: 123,45 PLN | Content Keywords: OCR...
+[INVOICE-ENTRY] Date: 2026-02-17 | Vendor: Danex | Amount: 123,45 PLN | Content Keywords: OCR...
+[INVOICE-ENTRY] Date: 2026-02-17 | Vendor: Danex | Amount: 123,45 PLN | Content Keywords: OCR...
+[INVOICE-ENTRY] Date: 2026-02-17 | Vendor: Danex | Amount: 123,45 PLN | Content Keywords: OCR...
+[INVOICE-ENTRY] Date: 2026-02-17 | Vendor: Danex | Amount: 123,45 PLN | Content Keywords: OCR...
+[INVOICE-ENTRY] Date: 2026-02-17 | Vendor: Danex | Amount: 123,45 PLN | Content Keywords: OCR...
