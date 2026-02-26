@@ -1,7 +1,8 @@
-﻿__pycache__/
-*.py[cod]
-*.log
+.env
 .venv/
 venv/
+__pycache__/
+*.py[cod]
+*.log
 faiss_index/
 observability_logs.jsonl
